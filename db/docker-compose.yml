@@ -1,0 +1,17 @@
+services:
+  library-db:
+    image: postgres:16-alpine
+    container_name: library-postgres-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: library_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+      - library_pgdata:/var/lib/postgresql/data
+
+volumes:
+  library_pgdata:

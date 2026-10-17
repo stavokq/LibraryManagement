@@ -1,0 +1,18 @@
+## Visual Studio and .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+.idea/
+.vscode/
+
+## Database data
+db/library_pgdata/
+*.log
+
+## OS files
+.DS_Store
+Thumbs.db
